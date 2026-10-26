@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fuga Espacial - SEU NOME</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TELA INICIAL -->
+    <section id="telaInicial" class="tela">
+        <h1>🚀 Fuga Espacial</h1>
+
+        <p>
+            Desvie dos meteoros e alcance 100 pontos!
+        </p>
+
+        <p>
+            PC: use as teclas ← → ou A/D.<br>
+            Celular: use os botões na tela.
+        </p>
+
+        <button id="btnJogar">Jogar</button>
+    </section>
+
+
+    <!-- JOGO -->
+    <section id="telaJogo" class="tela escondido">
+
+        <div class="informacoes">
+            <span>⭐ Pontos: <strong id="pontuacao">0</strong></span>
+            <span>❤️ Vidas: <strong id="vidas">3</strong></span>
+        </div>
+
+        <div id="campoJogo">
+
+            <div id="nave">🚀</div>
+
+        </div>
+
+        <!-- CONTROLES PARA CELULAR -->
+        <div class="controles">
+            <button id="btnEsquerda">⬅️</button>
+            <button id="btnDireita">➡️</button>
+        </div>
+
+    </section>
+
+
+    <!-- TELA FINAL -->
+    <section id="telaFinal" class="tela escondido">
+
+        <h1 id="mensagemFinal">Fim de jogo!</h1>
+
+        <p>
+            Sua pontuação foi:
+            <strong id="pontuacaoFinal">0</strong>
+        </p>
+
+        <button id="btnNovamente">
+            Jogar novamente
+        </button>
+
+    </section>
+
+
+    <!-- CRIADOR -->
+    <section class="criador">
+        <button id="btnCriador">👨‍💻 Criador do jogo</button>
+
+        <div id="infoCriador" class="escondido">
+            <p>Desenvolvido por: <strong>SEU NOME</strong></p>
+            <p>2º ano EMTI</p>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
