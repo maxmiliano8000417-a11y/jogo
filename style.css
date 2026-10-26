@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at 20% 20%, #243b70 0%, transparent 20%),
+        radial-gradient(circle at 80% 80%, #381c64 0%, transparent 25%),
+        #050817;
+
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    padding: 20px;
+}
+
+
+/* TELAS */
+
+.tela {
+    width: min(700px, 100%);
+    text-align: center;
+
+    background: rgba(12, 20, 45, 0.95);
+
+    border: 2px solid #40568c;
+
+    border-radius: 20px;
+
+    padding: 35px 20px;
+
+    box-shadow: 0 0 30px rgba(64, 120, 255, 0.25);
+}
+
+.escondido {
+    display: none !important;
+}
+
+
+/* TÍTULOS */
+
+h1 {
+    font-size: clamp(35px, 8vw, 60px);
+
+    margin-bottom: 20px;
+
+    color: #72a7ff;
+
+    text-shadow:
+        0 0 10px #387cff,
+        0 0 25px #387cff;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+
+    color: #dce5ff;
+}
+
+
+/* BOTÕES */
+
+button {
+    border: none;
+
+    background: #387cff;
+
+    color: white;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    padding: 14px 28px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #5c96ff;
+
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+/* INFORMAÇÕES DO JOGO */
+
+.informacoes {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    font-size: 20px;
+}
+
+
+/* CAMPO */
+
+#campoJogo {
+    position: relative;
+
+    width: 100%;
+
+    height: 500px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    border: 2px solid #536da8;
+
+    background-color: #050918;
+
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+
+    background-size: 50px 50px;
+
+    animation: estrelas 10s linear infinite;
+}
+
+
+@keyframes estrelas {
+
+    from {
+        background-position: 0 0, 25px 25px;
+    }
+
+    to {
+        background-position: 0 100px, 25px 125px;
+    }
+
+}
+
+
+/* NAVE */
+
+#nave {
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 45px;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+}
+
+
+/* METEOROS */
+
+.meteoro {
+    position: absolute;
+
+    top: -60px;
+
+    font-size: 40px;
+
+    user-select: none;
+}
+
+
+/* CONTROLES DO CELULAR */
+
+.controles {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 15px;
+}
+
+.controles button {
+    width: 80px;
+    height: 55px;
+
+    padding: 0;
+
+    font-size: 25px;
+
+    touch-action: manipulation;
+}
+
+
+/* CRIADOR */
+
+.criador {
+    margin-top: 20px;
+
+    text-align: center;
+}
+
+.criador button {
+    font-size: 15px;
+
+    padding: 10px 16px;
+
+    background: #202d4d;
+}
+
+#infoCriador {
+    margin-top: 10px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background: #101a31;
+}
+
+#infoCriador p {
+    margin: 3px;
+
+    font-size: 14px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .tela {
+        padding: 25px 12px;
+    }
+
+    #campoJogo {
+        height: 60vh;
+        max-height: 500px;
+        min-height: 350px;
+    }
+
+    .informacoes {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+}
